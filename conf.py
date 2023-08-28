@@ -134,13 +134,13 @@ html_theme_options = {
         #    "url": "https://pypi.org/project/pydata-sphinx-theme",
         #    "icon": "fa-solid fa-box",
         #},
-        #{
-        #    "name": "Geo-SfM",
-        #    "url": "https://unisvalbard.github.io/Geo-SfM/landing-page.html",
-        #    "icon": "_static/logo.png",
-        #    "type": "local",
-        #    "attributes": {"target": "_blank"},
-        #},
+        {
+            "name": "Github",
+            "url": "https://github.com/nfetra",
+            "icon": "_static/logos/github.svg",
+            "type": "local",
+            "attributes": {"target": "_blank"},
+        },
     ],
     "logo": {
         "text": "NFETRA Project",
