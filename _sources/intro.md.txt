@@ -2,7 +2,7 @@
 myst:
   html_meta:
     "description lang=en": |
-      Top-level page for the Svalbox.no domain.
+      Project page
 html_theme.sidebar_secondary.remove: true'
 ---
 
