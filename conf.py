@@ -8,7 +8,7 @@ import sys
 # -- Project information -----------------------------------------------------
 
 project = "NFETRA"
-copyright = "2023, authors"
+copyright = "2023, Betlem, Mohn, Tugend; 2023 Geomonkey AS"
 author = "Betlem, Mohn, Tugend"
 
 import pydata_sphinx_theme
@@ -76,8 +76,8 @@ myst_enable_extensions = ["colon_fence", "linkify", "substitution"]
 # a list of builtin themes.
 #
 html_theme = "pydata_sphinx_theme"
-html_logo = "_static/logo.svg"
-html_favicon = "_static/logo.svg"
+#html_logo = "_static/logo.svg"
+#html_favicon = "_static/logo.svg"
 #html_sourcelink_suffix = ""
 
 # Define the json_url for our version switcher.
@@ -103,19 +103,19 @@ html_permalinks = False
 html_theme_options = {
     "navigation_with_keys": False,
     "show_prev_next": False,
-    #"external_links": [
+    "external_links": [
         #{
     #        "url": "index.html",
     #        "name": "Home",
     #    },
-    #    {
-    #        "url": "map.html",
-    #        "name": "Map",
-    #    },
-    #    {
-    #        "url": "SvalClime.html",
-    #        "name": "SvalClime",
-    #    },
+        {
+            "url": "map.html",
+            "name": "Map",
+        },
+        {
+            "url": "team.html",
+            "name": "Team",
+        },
     #    {
     #        "url": "https://numfocus.org/",
     #        "name": "NumFocus",
@@ -124,7 +124,7 @@ html_theme_options = {
     #        "url": "https://numfocus.org/donate",
     #        "name": "Donate to NumFocus",
     #    },
-    #],
+    ],
     #"github_url": "https://github.com/pydata/pydata-sphinx-theme",
     #"twitter_url": "https://twitter.com/PyData",
     "header_links_before_dropdown": 4,
@@ -144,14 +144,14 @@ html_theme_options = {
     ],
     "logo": {
         "text": "NFETRA Project",
-        "image_dark": "logo-dark.svg",
+    #    "image_dark": "logo-dark.svg",
         "alt_text": "NFETRA",
     },
     #"use_edit_page_button": True,
     #"show_toc_level": 1,
     "navbar_align": "content",  # [left, content, right] For testing that the navbar items align properly
     "navbar_center": ["navbar-nav"],
-    #"announcement": "<p>Svalbox.no is undergoing upgrades - check back regularly for the latest improvements!</p>",
+    "announcement": "<p>These pages are under maintenance - check back regularly for the latest improvements!</p>",
     #"show_nav_level": 2,
     "navbar_start": ["navbar-logo"],
     #"navbar_end": ["navbar-icon-links"],

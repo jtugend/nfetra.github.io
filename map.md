@@ -13,5 +13,5 @@ html_theme.sidebar_secondary.remove: true'
     padding: 0;
     overflow: hidden;
     z-index: 10;
-    height: 80%;
+    height: 75%;
   "></iframe>
