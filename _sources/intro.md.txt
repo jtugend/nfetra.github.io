@@ -21,12 +21,12 @@ Discover Svalbard's geology through the interactive Svalbox map!
 
 :::{grid-item-card}
 
-**SVALCLIME**
+**Project Team**
 ^^^
 
 [<i class="fa-solid fa-people-group fa-2xl"></i>](svalclime)
 
-Deep-time Arctic climate archives: High-resolution coring of Svalbard’s sedimentary record.
+Information about the project team.
 :::
 ::::
 
