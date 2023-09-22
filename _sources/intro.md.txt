@@ -16,7 +16,7 @@ html_theme.sidebar_secondary.remove: true'
 
 [<i class="fa-solid fa-map-location-dot fa-2xl"></i>](map)
 
-Discover Svalbard's geology through the interactive Svalbox map!
+Discover unique geological targets through the interactive NFETRA map!
 :::
 
 :::{grid-item-card}
