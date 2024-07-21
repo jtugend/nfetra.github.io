@@ -4,9 +4,43 @@ myst:
     "description lang=en": |
       Project page
 html_theme.sidebar_secondary.remove: true'
+title: NFETRA
+short_title: NFETRA
 ---
 
-::::{grid} 1 1 2 2
+````{carousel}
+:show_indicators:
+:show_controls:
+:show_fade:
+:data-bs-ride: "carousel"
+
+```{figure} ./assets/field-photos/photo1.png
+:name: overview
+:class: no-scaled-link
+
+Spectacular views of large-scale detachments.
+
+%
+```
+
+```{figure} ./assets/field-photos/photo2.png
+:name: uav_surveys
+:class: no-scaled-link
+
+Spectacular views of large-scale detachments.
+
+%
+```
+
+````
+
+<br>
+
+# Welcome to the NFETRA project
+
+<br>
+
+::::{grid} 1 1 3 3
 :class-container: text-center
 :gutter: 3
 
@@ -14,9 +48,18 @@ html_theme.sidebar_secondary.remove: true'
 **Interactive Portal**
 ^^^
 
-[<i class="fa-solid fa-map-location-dot fa-2xl"></i>](map)
+[<i class="fa-solid fa-map-location-dot fa-2xl"></i>](#pages-map)
 
 Discover unique geological targets through the interactive NFETRA map!
+:::
+
+:::{grid-item-card}
+**About**
+^^^
+
+[<i class="fa-solid fa-book-open fa-2xl"></i>](#pages-about)
+
+Explore the NFETRA background and objectives.
 :::
 
 :::{grid-item-card}
@@ -24,18 +67,16 @@ Discover unique geological targets through the interactive NFETRA map!
 **Project Team**
 ^^^
 
-[<i class="fa-solid fa-people-group fa-2xl"></i>](team)
+[<i class="fa-solid fa-people-group fa-2xl"></i>](#pages-team)
 
 Information about the project team.
 :::
 ::::
 
-# About NFETRA
+## Latest publications
 
-NFETRA is all about low-angle normal faults.
-NFETRA is an acronym that stands for *Low-angle normal faults: How do they form and what is their role for the Energy Transition?*
-The project aims to compile and acquire key data sets and publications to provide an interactive 3D geoscientific database of relevant geological field sites..
+```{bibliography} latest-publications.bib
+:all:
 
-Through NFETRA we aim to take geoscientific research and education to the next level - with the simple motto of placing all key information and data sets in their correct spatial positions.
-We bring modern technology, in particular cost-effective digital outcrops, to complement more than 200 years of geoscientific research across the Alps.
-Finally, NFETRA provides a sustainable platform for sharing results, workflows and teaching material with the wider geoscientific community.
+```
+

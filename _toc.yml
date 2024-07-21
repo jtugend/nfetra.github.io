@@ -4,5 +4,7 @@
 format: jb-book
 root: intro
 chapters:
-  - file: map.md
-  - file: team.md
+  - file: pages/map.md
+  - file: pages/about.md
+  - file: pages/team.md
+  - file: pages/sponsors.md

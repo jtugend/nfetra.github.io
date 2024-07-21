@@ -1,6 +1,7 @@
 # -- Path setup --------------------------------------------------------------
 import os
 import sys
+from datetime import datetime as dt
 
 #sys.path.append("scripts")
 #from gallery_directive import GalleryDirective
@@ -8,8 +9,8 @@ import sys
 # -- Project information -----------------------------------------------------
 
 project = "NFETRA"
-copyright = "2023, Betlem, Mohn, Tugend; 2023 Geomonkey AS"
-author = "Betlem, Mohn, Tugend"
+copyright = f"Betlem, Mohn, Tugend, Morzelle 2023-{dt.today().year}"
+author = "Betlem, Mohn, Tugend, Morzelle"
 
 import pydata_sphinx_theme
 
@@ -24,6 +25,7 @@ extensions = [
     "sphinxext.rediraffe",
     "sphinx_design",
     "sphinx_copybutton",
+    "sphinx_carousel.carousel",
     # For extension examples and demos
     "ablog",
     "jupyter_sphinx",
@@ -36,7 +38,7 @@ extensions = [
     "sphinxcontrib.bibtex"
 ]
 
-bibtex_bibfiles = ['refs.bib']
+bibtex_bibfiles = ['references.bib', 'latest-publications.bib']
 bibtex_default_style = "plain"
 
 external_toc_path = "_toc.yml"  # optional, default: _toc.yml
@@ -108,14 +110,14 @@ html_theme_options = {
     #        "url": "index.html",
     #        "name": "Home",
     #    },
-        {
-            "url": "map.html",
-            "name": "Map",
-        },
-        {
-            "url": "team.html",
-            "name": "Team",
-        },
+    #    {
+    #        "url": "map.html",
+    #        "name": "Map",
+    #    },
+    #    {
+    #        "url": "team.html",
+    #        "name": "Team",
+    #    },
     #    {
     #        "url": "https://numfocus.org/",
     #        "name": "NumFocus",
@@ -149,15 +151,18 @@ html_theme_options = {
     },
     #"use_edit_page_button": True,
     #"show_toc_level": 1,
+    "article_header_start": [],
     "navbar_align": "content",  # [left, content, right] For testing that the navbar items align properly
     "navbar_center": ["navbar-nav"],
     "announcement": "<p>These pages are under maintenance - check back regularly for the latest improvements!</p>",
-    #"show_nav_level": 2,
+    #"show_nav_level": 1,
     "navbar_start": ["navbar-logo"],
     #"navbar_end": ["navbar-icon-links"],
     #"navbar_persistent": ["search-button"],
     # "primary_sidebar_end": ["custom-template.html", "sidebar-ethical-ads.html"],
-    "footer_items": ["copyright"],
+    #"content_footer_items": ,
+    "footer_start": ["copyright"],
+    "footer_end": []
     # "secondary_sidebar_items": ["page-toc.html"],  # Remove the source buttons
     #"switcher": {
     #    "json_url": json_url,
@@ -214,5 +219,18 @@ myst_substitutions = {"rtd": "[Read the Docs](https://readthedocs.org/)"}
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
-html_css_files = ["custom.css"]
+html_css_files = ["css/custom.css"]
 todo_include_todos = True
+
+
+import sys
+from sphinx.application import Sphinx
+from sphinx.util import logging
+sys.path.append("./scripts")
+
+from people import build_teamgallery
+from zotero import generate_zotero_library
+
+def setup(app: Sphinx):
+    app.connect("builder-inited", build_teamgallery)
+    app.connect("builder-inited", generate_zotero_library)
