@@ -8,10 +8,6 @@ title: NFETRA
 short_title: NFETRA
 ---
 
-```{margin} My sidebar title
-My sidebar content
-```
-
 ````{carousel}
 :show_indicators:
 :show_controls:
@@ -19,18 +15,21 @@ My sidebar content
 :data-bs-ride: "carousel"
 
 ```{figure} ./assets/field-photos/photo1.png
-:name: uav_surveys
-:carousel-caption-color: red
+:name: overview
+:class: no-scaled-link
 
 Spectacular views of large-scale detachments.
 
+%
 ```
+
 ```{figure} ./assets/field-photos/photo2.png
 :name: uav_surveys
-:carousel-caption-color: red
+:class: no-scaled-link
 
 Spectacular views of large-scale detachments.
 
+%
 ```
 
 ````
